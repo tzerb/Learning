@@ -139,7 +139,9 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\AuthZeroConfig.cs" />
+    <Compile Include="Controllers\BillingController.cs" />
     <Compile Include="Controllers\ShipmentsController.cs" />
+    <Compile Include="Models\Billing.cs" />
     <Compile Include="Models\Shipment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

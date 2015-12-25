@@ -17,6 +17,19 @@
 
     $scope.viewShipment = viewShipment;
 
+    function viewBilling() {
+        $http({
+            url: SERVICE_BASE + '/api/billing',
+            method: 'GET'
+        }).then(function (response) {
+            $scope.billing = response.data;
+        }, function (response) {
+            alert(response.data);
+        });
+    }
+
+    $scope.viewBilling = viewBilling;
+
     $scope.logout = function () {
         auth.signout();
         store.remove('profile');
@@ -26,4 +39,5 @@
     }
 
     viewShipment();
+    viewBilling();
 });
