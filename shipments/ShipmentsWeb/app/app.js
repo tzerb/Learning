@@ -3,6 +3,7 @@
     'ngRoute',
     'shipments.home',
     'shipments.login',
+    'shipments.billing',
     'angular-storage',
     'angular-jwt'
 ])
@@ -11,6 +12,11 @@
         .when('/', {
             controller: 'HomeCtrl',
             templateUrl: 'app/components/home/home.html',
+            requiresLogin: true
+        })
+        .when('/billing', {
+            controller: 'BillingCtrl',
+            templateUrl: 'app/components/billing/billing.html',
             requiresLogin: true
         })
         .when('/login', {

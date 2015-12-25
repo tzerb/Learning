@@ -19,11 +19,17 @@
     <script type="text/javascript" src="//cdn.auth0.com/w2/auth0-angular-4.js"></script>
 </head>
 <body>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="/#/">Home</a></li>
+        <li role="presentation"><a href="/#/billing">Billing</a></li>
+        <li role="presentation"><a href="/#/logout">Logout</a></li>
+    </ul>
     <div class="container" ng-view></div>
 
     <script src="app/config.js"></script>
     <script src="app/app.js"></script>
     <script src="app/components/home/home.js"></script>
+    <script src="app/components/billing/billing.js"></script>
     <script src="app/components/login/login.js"></script>
 </body>
 </html>

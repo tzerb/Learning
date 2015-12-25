@@ -1,21 +1,8 @@
-﻿angular.module('shipments.home', [
+﻿angular.module('shipments.billing', [
 'auth0'])
-.controller('HomeCtrl', function ($scope, auth, $http, $location, store) {
-    $scope.shipments = [];
+.controller('BillingCtrl', function ($scope, auth, $http, $location, store) {
+    $scope.billing = [];
     $scope.auth = auth;
-
-    function viewShipment() {
-        $http({
-            url: SERVICE_BASE + '/api/shipments',
-            method: 'GET'
-        }).then(function (response) {
-            $scope.shipments = response.data;
-        }, function (response) {
-            alert(response.data);
-        });
-    }
-
-    $scope.viewShipment = viewShipment;
 
     function viewBilling() {
         $http({
@@ -31,11 +18,10 @@
     $scope.viewBilling = viewBilling;
 
     $scope.logout = function () {
-        //alert('logout');
         auth.signout();
         store.remove('profile');
         store.remove('token');
-        store.remove('refreshtoken');
+        store.remove('refreshToken');
         $location.path('/login');
     }
 
@@ -46,6 +32,5 @@
 
     $scope.gotobilling = gotobillingX;
 
-    viewShipment();
     viewBilling();
 });

@@ -1,0 +1,31 @@
+﻿<h1 id="header">
+    <img ng-src="{{auth.profile.picture}}" class="img-circle" />
+</h1>
+<h2>Welcome {{auth.profile.nickname}}</h2>
+<button class="btn btn-primary" ng-click="viewBilling();">View my billing</button>
+<button class="btn btn-warning" ng-click="logout()">Logout</button>
+<div class="row">&nbsp;</div>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Billing ID</th>
+                <th>Origin</th>
+                <th>Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="bill in billing">
+                <td>
+                    {{bill.id}}
+                </td>
+                <td>
+                    {{bill.origin}}
+                </td>
+                <td>
+                    {{bill.destination}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
