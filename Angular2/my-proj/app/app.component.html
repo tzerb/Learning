@@ -1,0 +1,40 @@
+<h1 (mousemove)="mousemoveit($event)" [style.background-color]="bgColor" (click)="clickit()">My First Angular 2 App</h1>
+<h4>{{helloMsg}}</h4>
+<hr/>
+<input [(ngModel)]="bgColor" />
+<div>{{bgColor}}</div>
+
+<div [ngSwitch]="bgColor">
+    <p *ngSwitchWhen="'green'">green</p>
+    <p *ngSwitchWhen="'yello'">yello</p>
+    <p *ngSwitchDefault>Something Else</p>
+</div>
+
+<hr/>
+<tester1 [param1]="bgColor"></tester1>
+<tester1 [param1]="'abc123'"></tester1>
+<hr/>
+
+<ul *ngFor="#t of testArr, #i=index">
+    <li *ngIf="((i % 2) == 0)">
+        <div>
+            {{i}} - {{t.t | hp}} - {{t.n | number:'1.0-0'}} - {{ t.dt | date:'medium' }}
+        </div>
+        {{t | json}}
+    </li>
+</ul>
+
+<!--  -->
+<div class="inactive" [ngClass]="{active: isOn, inactive: !isOn}" (click)="focus($event)" (dblclick)="dblclick($event)">
+    tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>tester
+    <br/>
+</div>
