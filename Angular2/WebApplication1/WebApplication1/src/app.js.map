@@ -1,0 +1,1 @@
+{"version":3,"file":"app.js","sourceRoot":"","sources":["app.ts"],"names":["App","App.constructor"],"mappings":";;;;;;;;;;;;;;IAAA,wBAAwB;IACxB,qBAAwB,4BAExB,CAAC,CAFmD;IAEpD;QAWIA;YACIC,wBAAwBA;QAC5BA,CAACA;IACLD,CAACA;IAdD;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,QAAQ;YAClB,SAAS,EAAE,EAAE;YACb,QAAQ,EAAE;;;;GAIX;YACC,UAAU,EAAE,EAAE;SACjB,CAAC;YAKD;IAJY,WAAG,MAIf,CAAA"}
