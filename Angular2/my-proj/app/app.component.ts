@@ -5,7 +5,7 @@ import {Tester1} from './app.tester1';
 export class HelloPipe implements PipeTransform
 {
     transform(value:string, args: any[]){
-        return 'hello ' + value;
+        return 'HelloPipe ' + value;
     }
 }
 
@@ -36,7 +36,13 @@ export class AppComponent {
     {
         // alert('here');
         console.log(e);
-        this.helloMsg = "(" + e.x + ", " + e.y + ")"; 
+        if (false && (e.x != undefined))
+        {
+            this.helloMsg = "IE Chrome (" + e.x + ", " + e.y + ")"; 
+        }
+        else {
+            this.helloMsg = "FireFox (" + e.clientX + ", " + e.clientY + ")";
+        } 
     }
     
     clickit() {
