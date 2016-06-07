@@ -4,8 +4,18 @@ namespace Model
     using System.Data.Entity;
     using System.Linq;
 
+    public class UserNameEventArgs : EventArgs
+    {
+        public string UserName { get; set; }
+    }
+
     public class CreatedModifiedModel : DbContext
     {
+        public delegate void UserNameEventHandler(object sender, UserNameEventArgs e);
+
+        // Declare the event.
+        public event UserNameEventHandler UserNameEvent;
+
         // Your context has been configured to use a 'CreatedModifiedModel' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
         // 'Model.CreatedModifiedModel' database on your LocalDb instance. 
@@ -20,7 +30,14 @@ namespace Model
         public override int SaveChanges()
         {
             var entities = ChangeTracker.Entries().Where(x => x.Entity is BaseEntity && (x.State == EntityState.Added || x.State == EntityState.Modified));
-            var currentUsername = "currentUsername";
+
+            var currentUsername = "default";
+            if (UserNameEvent != null)
+            {
+                var e = new UserNameEventArgs();
+                UserNameEvent(this, e);
+                currentUsername = e.UserName;
+            }
 
             //var currentUsername = HttpContext.Current != null && HttpContext.Current.User != null
             //    ? HttpContext.Current.User.Identity.Name
