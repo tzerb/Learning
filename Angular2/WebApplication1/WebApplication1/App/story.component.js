@@ -12,8 +12,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         define(["require", "exports", 'node_modules/angular2/core'], factory);
     }
 })(function (require, exports) {
-    var core_1 = require('node_modules/angular2/core');
-    let StoryComponent = class {
+    "use strict";
+    const core_1 = require('node_modules/angular2/core');
+    let StoryComponent = class StoryComponent {
         constructor() {
             this.story = { id: 100, name: 'The Force Awakens' };
             this.color = 'blue';

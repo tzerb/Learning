@@ -12,8 +12,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         define(["require", "exports", 'node_modules/angular2/core'], factory);
     }
 })(function (require, exports) {
-    var core_1 = require('node_modules/angular2/core');
-    let HelloWorld = class {
+    "use strict";
+    const core_1 = require('node_modules/angular2/core');
+    let HelloWorld = class HelloWorld {
         constructor() {
             // Declaring the variable for binding with initial value
             this.yourName = '';

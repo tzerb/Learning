@@ -6,8 +6,9 @@
         define(["require", "exports", 'node_modules/angular2/platform/browser', './hello_world'], factory);
     }
 })(function (require, exports) {
-    var browser_1 = require('node_modules/angular2/platform/browser');
-    var hello_world_1 = require('./hello_world');
+    "use strict";
+    const browser_1 = require('node_modules/angular2/platform/browser');
+    const hello_world_1 = require('./hello_world');
     browser_1.bootstrap(hello_world_1.HelloWorld);
 });
 //# sourceMappingURL=main.js.map

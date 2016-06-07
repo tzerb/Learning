@@ -12,9 +12,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         define(["require", "exports", 'node_modules/angular2/core'], factory);
     }
 })(function (require, exports) {
+    "use strict";
     //our root app component
-    var core_1 = require('node_modules/angular2/core');
-    let App = class {
+    const core_1 = require('node_modules/angular2/core');
+    let App = class App {
         constructor() {
             //this.name = 'Angular2'
         }
