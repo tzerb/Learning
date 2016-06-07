@@ -10,6 +10,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            Model.CreatedModifiedModel context = new Model.CreatedModifiedModel();
+            context.MyEntities.Add(new Model.MyEntity { Name = "FirstEntitiy" });
+            context.SaveChanges();
         }
     }
 }
