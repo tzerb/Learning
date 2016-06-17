@@ -16,7 +16,8 @@ using WebApplication5.Services;
 namespace WebApplication5
 {
     //https://angular.io/docs/ts/latest/guide/npm-packages.html
-
+    // https://www.typescriptlang.org/docs/handbook/asp-net-core.html
+    //https://angular.io/docs/ts/latest/quickstart.html#!#index
     public class Startup
     {
         public Startup(IHostingEnvironment env)
