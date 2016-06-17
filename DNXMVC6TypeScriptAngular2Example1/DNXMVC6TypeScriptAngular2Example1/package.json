@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "tsd": "0.6.5",
+    "angular2": "2.0.0-beta.3",
+    "systemjs": "0.19.6",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

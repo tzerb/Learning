@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "DNX MVC6 TypeScript Angular2 example";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="~/site.css" />
+
+    @RenderSection("css", false)
+
+    <!-- Angular2 js -->
+    <script src="/libraries/angular2/system.js"></script>
+    <script src="/libraries/angular2/reflect.js"></script>
+    <script src="/libraries/angular2/rx.js"></script>
+    <script src="/libraries/angular2/angular2-polyfills.js"></script>
+    <script src="/libraries/angular2/angular2.dev.js"></script>
+    <script src="/libraries/angular2/http.dev.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                components: {
+                    defaultExtension: 'js'
+                },
+                services: {
+                    defaultExtension: 'js'
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="body-container">
+
+        <header></header>
+
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script>
+        System.import('components/header/header');
+    </script>
+
+    @RenderSection("scripts", false)
+</body>
+
+
+</html>
