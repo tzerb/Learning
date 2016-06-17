@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 
 //https://app.pluralsight.com/player?course=asp-dot-net-5-understanding&author=roland-guijt&name=asp-dot-net-5-understanding-m2&clip=0&mode=live
 //http://www.mithunvp.com/angular-2-in-asp-net-5-typescript-visual-studio-2015/
+
 namespace WebApplication4
 {
     public class Startup
