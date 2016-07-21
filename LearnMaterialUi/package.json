@@ -1,0 +1,21 @@
+{
+  "name": "learnmaterialui",
+  "version": "1.0.0",
+  "description": "Learn material UI",
+  "main": "index.js",
+  "dependencies": {
+    "lite-server": "^2.2.2",
+    "material-ui": "^0.15.2",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-tap-event-plugin": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Zirbel",
+  "license": "ISC"
+}
